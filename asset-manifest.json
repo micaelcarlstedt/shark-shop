@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shark-shop/static/css/main.0d94d79d.chunk.css",
+    "main.js": "/shark-shop/static/js/main.3948db83.chunk.js",
+    "main.js.map": "/shark-shop/static/js/main.3948db83.chunk.js.map",
+    "runtime-main.js": "/shark-shop/static/js/runtime-main.b9d15c81.js",
+    "runtime-main.js.map": "/shark-shop/static/js/runtime-main.b9d15c81.js.map",
+    "static/css/2.032730b7.chunk.css": "/shark-shop/static/css/2.032730b7.chunk.css",
+    "static/js/2.14fe7388.chunk.js": "/shark-shop/static/js/2.14fe7388.chunk.js",
+    "static/js/2.14fe7388.chunk.js.map": "/shark-shop/static/js/2.14fe7388.chunk.js.map",
+    "index.html": "/shark-shop/index.html",
+    "precache-manifest.f87c5aa1b89f7d5bfebaf71165eb9c2f.js": "/shark-shop/precache-manifest.f87c5aa1b89f7d5bfebaf71165eb9c2f.js",
+    "service-worker.js": "/shark-shop/service-worker.js",
+    "static/css/2.032730b7.chunk.css.map": "/shark-shop/static/css/2.032730b7.chunk.css.map",
+    "static/css/main.0d94d79d.chunk.css.map": "/shark-shop/static/css/main.0d94d79d.chunk.css.map",
+    "static/js/2.14fe7388.chunk.js.LICENSE.txt": "/shark-shop/static/js/2.14fe7388.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/shark-shop/static/media/logo.b7c58c41.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9d15c81.js",
+    "static/css/2.032730b7.chunk.css",
+    "static/js/2.14fe7388.chunk.js",
+    "static/css/main.0d94d79d.chunk.css",
+    "static/js/main.3948db83.chunk.js"
+  ]
+}
