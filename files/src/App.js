@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
 import ProductList from "./components/ProductList";
-import Campaigns from "./components/Campaigns";
+import CampaignList from "./components/CampaignList";
 import CampaignDetails from "./components/CampaignDetails";
-import Details from "./components/Details";
+import ProductDetails from "./components/ProductDetails";
 import Default from "./components/Default";
 
 class App extends Component {
@@ -17,9 +17,9 @@ class App extends Component {
         <AppHeader />
         <Switch>
           <Route exact path="/" component={ProductList} />
-          <Route path="/details" component={Details} />
+          <Route path="/details" component={ProductDetails} />
           <Route path="/campaigns/details" component={CampaignDetails} />
-          <Route path="/campaigns" component={Campaigns} />
+          <Route path="/campaigns" component={CampaignList} />
           <Route component={Default} />
         </Switch>
         <AppFooter />

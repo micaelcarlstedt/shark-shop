@@ -4,7 +4,7 @@ import Badge from 'react-bootstrap/Badge';
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { CampaignConsumer } from "../campaignContext";
+import { CampaignConsumer } from "../data/CampaignContext";
 
 const StyledCampaign = styled.div`
   .campaign {
@@ -28,6 +28,7 @@ class Campaign extends Component {
       img,
       discount_percentage, 
       active,
+      products
     } = this.props.campaign;
 
     return (

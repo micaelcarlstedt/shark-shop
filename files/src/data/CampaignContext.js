@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { campaigns } from "./campaigns";
+import { campaigns } from "./CampaignData";
 
 const CampaignContext = React.createContext();
 
@@ -37,38 +37,6 @@ class CampaignProvider extends Component {
   };
 
   updateCampaign = campaign => {
-    
-      // console.log(state)
-      console.log(campaign);
-      // selectedCampaign: props.campaign
-      // campaigns: state
-    //   console.log(this.state)
-    //   this.state.selectedCampaign = campaign;
-    //   this.state.campaigns = this.state.campaigns.map(x => (x.id === campaign.id) ? campaign : x);
-    //   // this.state.campaigns = updatedCampaigns;
-    // // let foundIndex = this.state.campaigns.findIndex(item => item.id === campaign.id);
-    // this.state.campaigns[foundIndex] = this.state.selectedCampaign;
-    // console.log(this.state)
-
-    // const existingCampaign = this.state.campaigns.find(item => item.id === campaign.id);
-    // console.log(existingCampaign)
-
-    // let updatedCampaigns = this.state.campaigns.map(x => (x.id === campaign.id) ? campaign : x)
-
-    // console.log(updatedCampaigns)
-
-    // let tempCampaigns = [];
-    // campaigns.forEach(item => {
-    //   if (item.id === campaign.id){
-        
-    //   }
-    //   const singleItem = { ...item };
-    //   tempCampaigns = [...tempCampaigns, singleItem];
-    // });
-
-    // let tempCampaigns = [];
-    // tempCampaigns = this.state.campaigns.map(item => (item.id === parseInt(campaign.id)) ? campaign : item)
-
     this.setState(() => {
       return { 
         selectedCampaign: null,

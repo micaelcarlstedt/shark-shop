@@ -1,11 +1,10 @@
 import React, { Component } from "react";
+import { Link, Redirect } from "react-router-dom";
 import styled from "styled-components";
 import Form from 'react-bootstrap/Form';
 import { Button } from "./Button";
-import { CampaignConsumer } from "../campaignContext";
-import { ProductConsumer } from "../context";
-import { Link, Redirect } from "react-router-dom";
 import Title from "./Title";
+import { CampaignConsumer } from "../data/CampaignContext";
 
 const StyledCampaignDetails = styled.div`
 
@@ -53,14 +52,14 @@ class CampaignDetails extends Component {
                   event.preventDefault();
 
                   let campaign = {
-                    id: parseInt(event.target.elements.id.value),
-                    name: event.target.elements.name.value,
-                    img: event.target.elements.img.value,
-                    startdate: event.target.elements.startdate.value,
-                    enddate: event.target.elements.enddate.value,
-                    discount_percentage: parseInt(event.target.elements.discount_percentage.value),
-                    active: event.target.elements.active.checked,
-                    products: event.target.elements.products.value,
+                    id: parseInt(event.target.elements.idControl.value),
+                    name: event.target.elements.nameControl.value,
+                    img: event.target.elements.imgControl.value,
+                    startdate: event.target.elements.startdateControl.value,
+                    enddate: event.target.elements.enddateControl.value,
+                    discount_percentage: parseInt(event.target.elements.discount_percentageControl.value),
+                    active: event.target.elements.activeControl.checked,
+                    products: event.target.elements.productsControl.value,
                   }
 
                   campaignContext.updateCampaign(campaign);
@@ -90,7 +89,7 @@ class CampaignDetails extends Component {
                           <Form.Group controlId="formCampaignId" hidden>
                             <Form.Label>Id</Form.Label>
                             <Form.Control type="number"
-                                          name="id"
+                                          name="idControl"
                                           defaultValue={id}
                                           placeholder="The Id of the campaign"
                                            />
@@ -99,7 +98,7 @@ class CampaignDetails extends Component {
                           <Form.Group controlId="formCampaignName">
                             <Form.Label>Name</Form.Label>
                             <Form.Control type="text"
-                                          name="name"
+                                          name="nameControl"
                                           defaultValue={name}
                                           placeholder="Enter name of the campaign"/>
                           </Form.Group>
@@ -107,7 +106,7 @@ class CampaignDetails extends Component {
                           <Form.Group controlId="formCampaignStart">
                             <Form.Label>Startdate</Form.Label>
                             <Form.Control type="datetime-local"
-                                          name="startdate"
+                                          name="startdateControl"
                                           defaultValue={startdate}
                                           placeholder="The date when the campaign starts"/>
                           </Form.Group>
@@ -115,7 +114,7 @@ class CampaignDetails extends Component {
                           <Form.Group controlId="formCampaignEnd">
                             <Form.Label>Enddate</Form.Label>
                             <Form.Control type="datetime-local"
-                                          name="enddate"
+                                          name="enddateControl"
                                           defaultValue={enddate}
                                           placeholder="The date when the campaign ends"/>
                           </Form.Group>
@@ -141,9 +140,10 @@ class CampaignDetails extends Component {
                             <Form.Label>Products</Form.Label>
 
                             <Form.Control as="select" name="productsControl" multiple>
-                            {products.map((productid, index) => (
+                            {
+                              products.map((productid, index) => (
                                         <option key={index} value={productid}>{productid}</option>
-                                ))}
+                              ))}
                             </Form.Control>
                             
                           </Form.Group>
@@ -151,7 +151,7 @@ class CampaignDetails extends Component {
                           <Form.Group controlId="formCampaignActive">
                             <Form.Check
                               type="switch"
-                              name="active"
+                              name="activeControl"
                               label="Active"
                               defaultChecked={active}
                             />

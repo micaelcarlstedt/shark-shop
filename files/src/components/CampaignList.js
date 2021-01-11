@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Campaign from "./Campaign";
 import Title from "./Title";
-import { CampaignConsumer } from "../campaignContext";
+import { CampaignConsumer } from "../data/CampaignContext";
 
-export default class Campaigns extends Component {
+export default class CampaignList extends Component {
   render() {
     return (
       <React.Fragment>
@@ -15,11 +15,6 @@ export default class Campaigns extends Component {
                 <br/>
                 <br/>
               </div>
-{/* <div className="container align-self-center">
-                <div className="container full-width align-self-center">
-                  <input className="container fluid col-4 align-content-center align-self-center"></input>
-                </div>
-              </div> */}
             <div className="container full-width">
               <CampaignConsumer>
                 {value => {
